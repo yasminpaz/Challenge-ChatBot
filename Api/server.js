@@ -16,7 +16,7 @@ app.get("/valores/:idValor", (request, response) => {
     response.status(200).send(mensagem)
 })
 
-const port = 3000
+const port = process.env.PORT || 3000
 app.listen(port, () => {
     console.log('Servidor Iniciado')
 })
